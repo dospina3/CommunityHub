@@ -32,9 +32,9 @@ app.get('/JakeBosch', function(req, res){
     res.sendFile(path.join(__dirname+'/charity5.html'));
     charityChosen = "Jake Bosch";
 });
-app.get('/TheWho', function(req, res){
+app.get('/BillyJeffords', function(req, res){
     res.sendFile(path.join(__dirname+'/charity6.html'));
-    charityChosen = "The Who";
+    charityChosen = "Billy Jeffords";
     //document.getElementById("name").innerHTML = charityChosen;
 });
 

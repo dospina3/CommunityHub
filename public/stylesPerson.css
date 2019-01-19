@@ -11,7 +11,7 @@
 
 }
 h1{
-	margin-top: 20px;
+	margin-top: 1px;
 	text-align: center;
 	font-family: 'Bubbler One';
 	font-size: 72px;
@@ -19,7 +19,7 @@ h1{
 
 }
 h2{
-  
+    margin-top: 1px;
   text-align: center;
   font-family: 'Sarabun', sans-serif;
   font-size: 60px;
@@ -27,6 +27,8 @@ h2{
 
 }
 h4{
+    margin-top: -10px;
+    margin-bottom: 10px;
   text-align: center;
   font-family: 'Sarabun', sans-serif;
   font-size: 30px;
@@ -48,13 +50,13 @@ body{
 
 .center {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  margin-left: 300;
+  margin-right: 300px;
+  width: 20%;
 }
 .card-body{
-	   background: gray;
-    color: white;
+	   background: #e6ecff;
+    color: black;
 	text-align: center;
 }
 .card{
