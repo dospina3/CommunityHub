@@ -22,14 +22,12 @@ header {
 
 .hub {
 	margin-top: 2%;
-	border: 10px;
-	border-color: white;
+	text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
 }
 
 .w3-container{
 
 	margin-top: 6%;
-
 	margin-left: 30%;
 	margin-right: 10%;
 	margin-bottom: 10%;
@@ -38,8 +36,8 @@ header {
 }
 
 input {
-	
-  	margin-left: 20px;
+  	margin-left: 500px;
+  	align-self: auto;
 }
 
 
@@ -56,6 +54,7 @@ input {
 
 /* Add a background color on hover */
 .btn-group button:hover {
-  background-color: blue;
+  background-color: #DB7093	 ;
 
 }
+
