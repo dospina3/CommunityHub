@@ -1,0 +1,33 @@
+
+
+.card-columns {
+	margin-top: 40px;
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+
+}
+
+h1{
+	margin-top: 20px;
+	text-align: center;
+	font-family: 'Bubbler One';
+	font-size: 72px;
+}
+
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.card-body{
+	   background: gray;
+    color: white;
+	text-align: center;
+}
