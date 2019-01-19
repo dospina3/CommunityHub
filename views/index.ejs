@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang = "en" >
+
+
+
+<head>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+
+<link href='https://fonts.googleapis.com/css?family=Bubbler One' rel='stylesheet'>
+
+<style>
+.card-columns {
+  margin-top: 40px;
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+
+}
+
+h1{
+  margin-top: 20px;
+  text-align: center;
+  font-family: 'Bubbler One';
+  font-size: 72px;
+}
+
+h5{
+  text-align: center;
+  font-family: 'Times';
+  font-size: 22px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.card-body{
+     background: gray;
+    color: white;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+
+
+  <h3>Testing Input Form</h3>
+  <form method = "POST" action = "/post-feedback">
+    <label> Name: <input type="text" name="person"></label>
+  </form>
+  <a href ="view-feedback"> View Feedback </a>
+
+
+<div class = decorHome>
+<h1> Community Hub </h1>
+<h5> "Donate through accredited charities to meet the needs of individuals in your community."</h5>
+<div class="rightcolumn">
+<hr>
+<img id= "charityImg" src="/public/charity.png" class = "center" alt="charity image"> 
+<div>
+
+
+<div id = "reactDiv">
+
+<div class="card-columns" >
+
+    <div id="list" > </div>
+    
+    <% arrayPeople.forEach(function(person) { %>
+      <div class="card">
+      <div class="card-body">
+        <h5 class = "card-title"><%= person %></h5>
+        <p class="card-text">Need warm coat</p>
+        <a href="#" class="btn btn-primary">More Info</a>
+      </div>
+      </div>
+    <% }); %>
+
+</div>
+
+
+</body>
+</html>
