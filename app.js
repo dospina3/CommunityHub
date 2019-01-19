@@ -1,7 +1,7 @@
 //EMAIL (Gmail)
 // Username: swamphackscommunityhub@gmail.com
 //Password: C0mmun1tyHub
-
+//To run emails run this in your console npm install nodemailer
 
 const express = require('express');
 const app = express();
@@ -55,6 +55,16 @@ app.get('/BillyJeffords', function(req, res){
     charityChosen = "Billy Jeffords";
     //document.getElementById("name").innerHTML = charityChosen;
 });
+app.get('/Anipso', function(req, res){
+    res.sendFile(path.join(__dirname+'/AdminPage.html'));
+    var fullName = req.query.fullName;
+    var age = req.query.age;
+    var message = req.query.message;
+    var category = req.query.category;
+    var needDescription = req.query.needDescription;
+    //document.getElementById("name").innerHTML = charityChosen;
+});
+
 
 app.listen(3000, function () {
   console.log('Server started on port 3000!');
