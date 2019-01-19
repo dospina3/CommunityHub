@@ -42,8 +42,8 @@ app.listen(3000, function () {
   console.log('Server started on port 3000!');
 })
 
-app.get('/donatePage', function(req, res){
-	res.sendFile(path.join(__dirname+'/donatePage.html'))
+app.get('/payment', function(req, res){
+	res.sendFile(path.join(__dirname+'/payment.html'))
 })
 
 app.get('/donate', function(req, res){

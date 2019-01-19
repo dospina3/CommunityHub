@@ -1,0 +1,66 @@
+body {
+ /* background-image: url("backpics.jpeg");*/
+ 
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;              /* optional, center the image */
+}
+
+header {
+	
+    width:100%;
+    height:105px;
+    background-image:url("charity.png");
+	display: flex;
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	color: black;
+
+
+}
+
+.hub {
+	margin-top: 2%;
+	border: 10px;
+	border-color: white;
+}
+
+.w3-container{
+
+	margin-top: 6%;
+	margin-left: 30%;
+	margin-right: 10%;
+	margin-bottom: 4%;
+	max-width: 600px;
+
+}
+
+input {
+	
+  	margin-left: 20px;
+}
+
+.text{
+	margin-left: 30%;
+	margin-right: 10%;
+	max-width: 600px;
+	text-align: center;
+}
+
+/* BUTTON STUFF*/
+
+.btn-group button {
+	background-color: pink; /* Green background */
+	border: 1px solid white; /* Green border */
+	color: white; /* White text */
+	padding: 10px 20px; /* Some padding */
+	cursor: pointer; /* Pointer/hand icon */
+	float: left; /* Float the buttons side by side */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: blue;
+
+}
