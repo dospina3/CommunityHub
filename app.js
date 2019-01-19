@@ -5,9 +5,12 @@ const router = express.Router();
 var mongoose = require('mongoose');
 
 
-app.get('/', function (req, res) {
+//I commented out previous get, with a static serve that serves index.html and styles.css
+app.use(express.static("public"));
+
+/*app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname+'/index.html'));
-})
+})*/
 
 app.get('/charities', function(req, res){
     res.sendFile(path.join(__dirname+'/charities.html'))
