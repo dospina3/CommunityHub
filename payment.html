@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Donate Page</title>
+		<link rel="stylesheet" type="text/css" href="paymentStyles.css">
+		<meta charset="UTF-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	</head>
+
+
+	<body>
+		
+		<header align="center" style="font-size:250%">
+			<div class="hub">
+				Community Hub Donation's Page
+			</dir>
+		</header>
+
+		<br><br>
+		<br><br>
+		<div  class="w3-container w3-center ">
+			<div class="w3-panel w3-card">		
+				<h1 align="left"> Credit Card Info</h1>
+
+				<div align="left" class="btn-group">
+				 	<button>Visa</button>
+				 	<button>Master Card</button>
+					<button>Discover</button>
+				 	<button>AMXs</button>
+				</div>
+				<br><br>
+				<br>
+				<form align="left" action="http://localhost:3000/donate">
+				 	First name:
+					<input type="text" name="firstname" value="">
+					<br>
+					Last name:        
+					<input type="text" name="lastname" value="">
+					<br>
+					Account Number: 
+					<input type="text" name="accountnumber" value="">
+					<br>
+					CVV: 
+					<input type="text" name="cvv" value="">
+					<br>
+					Billing Address: 
+					<input type="text" name="addy" value="">
+					<br>
+					Donation Amount: 
+					<input type="text" name="amount" value="">
+					<br>
+					Donation:
+					<select>
+						<option value="item0"></option>
+						<option value="item1">Coat for Jill</option>
+					 	<option value="item2">Groceries for Johnny</option>
+					 	<option value="item3">Hot meal for Vanessa</option>
+					 	<option value="item4">Tie for Mike</otion>
+					 	<option value="item5">Pair of socks for Jake</otion>
+					 	<option value="item6">Sneakers for Billy</otion>
+					</select>
+					<br><br>
+					<input type="submit" value="Submit">
+					<input type="reset">
+				</form>
+				<br>
+			</div>
+		</div>
+		<div class = "text">
+			If you'd like to donate a physical object instead, contact us here! 
+			<br>
+			(Please include your name and contact information)
+			<form action="http://localhost:3000/donateT">
+			<textarea name="myTextBox" cols="50" rows="5">
+			
+			</textarea>
+<br />
+<input type = "submit"/>
+</form>
+
+
+		</div>
+	</body>
+
+</html>
