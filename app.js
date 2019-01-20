@@ -12,6 +12,7 @@ var mongodb = require('mongoose');
 var bodyParser = require('body-parser');
 
 //DATABASE SETUP BEGINS
+app.use(express.static(path.join(__dirname, 'views')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
 var db = mongoose.connect('mongodb://user:password1@ds161144.mlab.com:61144/communityhub');
