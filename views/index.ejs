@@ -28,7 +28,7 @@
 }
 
 h1{
-  margin-top: 20px;
+  margin-top: 0px;
   text-align: center;
   font-family: 'Bubbler One';
   font-size: 72px;
@@ -39,7 +39,10 @@ h5{
   font-family: 'Times';
   font-size: 22px;
 }
-
+#adminButton{
+margin-left: 90%;
+margin-top: 20px;
+}
 .center {
   display: block;
   margin-left: auto;
@@ -56,13 +59,9 @@ h5{
 
 <body>
 
+<a id= "adminButton" href="http://localhost:3000/Anipso" class="btn btn-primary">Admin</a>
 
 
-  <h3>Testing Input Form</h3>
-  <form method = "POST" action = "/post-feedback">
-    <label> Name: <input type="text" name="person"></label>
-  </form>
-  <a href ="view-feedback"> View Feedback </a>
 
 
 <div class = decorHome>
@@ -98,13 +97,9 @@ h5{
 
 
 
-
-
-
-
 <div class="rightcolumn">
 
-<img id= "charityImg" src="/public/charity.png" class = "center" alt="charity image"> 
+<img id= "charityImg" src="charity.png" class = "center" alt="charity image"> 
 <div>
 
 
@@ -117,8 +112,10 @@ h5{
     <% arrayPeople.forEach(function(person) { %>
       <div class="card">
       <div class="card-body">
-        <h5 class = "card-title"><%= person %></h5>
-        <p class="card-text">Need warm coat</p>
+        <h2 class = "card-title"><%=person.fullName%></h2>
+        <h5 class = "card-title">Age: <%=person.age%></h5>
+         
+         <p class="card-text"> Need: <%=person.needDescription%></p>
         <a href="http://localhost:3000/VanessaToblerone" class="btn btn-primary">More Info</a>
       </div>
       </div>

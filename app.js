@@ -1,3 +1,4 @@
+
 //EMAIL (Gmail)
 // Username: swamphackscommunityhub@gmail.com
 //Password: C0mmun1tyHub
@@ -12,11 +13,18 @@ var mongodb = require('mongoose');
 var bodyParser = require('body-parser');
 
 //DATABASE SETUP BEGINS
+app.use(express.static(path.join(__dirname, 'views')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
 var db = mongoose.connect('mongodb://user:password1@ds161144.mlab.com:61144/communityhub');
 var nameSchema = new mongoose.Schema({
-  name: String,
+  fullName: String,
+  age: String,
+  message: String,
+  needDescription: String,
+  category: String,
+  needDescription: String,
+
 });
 var peopleWithNeed = mongoose.model('peopleWithNeed', nameSchema);
 //DATABASE SETUP ENDS
@@ -24,18 +32,6 @@ var peopleWithNeed = mongoose.model('peopleWithNeed', nameSchema);
 //app.use(express.static("public"));
 app.set('views', './views');
 app.set('view engine', 'ejs');
-
-var arrayPeople = []
- 
- peopleWithNeed.find({},function( err, documents){
-    if(err) throw err;
-    console.log(documents);
-    for(x in documents){
-    	console.log('documents[x].name');
-		console.log(documents[x].name);    	
-		arrayPeople[x] = documents[x].name;
-    }
-   });
 
 var mailText;
 var charityChosen  = "John Doe"; //This will be used to keep track of who you're going to donate to
@@ -54,56 +50,50 @@ var transporter = nodemailer.createTransport({
 app.get('/', function (req, res) {
 console.log('in serve');
 
+  var arrayPeople = [];
   peopleWithNeed.find({},function( err, documents){
-  	var arrayPeople = [];
-    if(err) throw err;
-    console.log(documents);
-    for(x in documents){
-    	console.log('documents[x].name');
-		console.log(documents[x].name);    	
-		arrayPeople[x] = documents[x].name;
-    }
+    if(err) throw err;    	
+		arrayPeople = documents;
+    console.log('should be correct', documents);
+    return res.render('index', {arrayPeople: arrayPeople});
    });
-
-  console.log('In Serve');
-  
-  res.render('index', {arrayPeople: arrayPeople});
-  
 })
 
 app.get('/JillRoberts', function(req, res){
-    res.sendFile(path.join(__dirname+'/charity1.html'));
+    res.sendFile(path.join(__dirname+'/views/charity1.html'));
     charityChosen = "Jill Roberts";
 });
 app.get('/JohnnyCash', function(req, res){
-    res.sendFile(path.join(__dirname+'/charity2.html'));
+    res.sendFile(path.join(__dirname+'/views/charity2.html'));
     charityChosen = "Johnny Cash";
 });
 app.get('/VanessaToblerone', function(req, res){
-    res.sendFile(path.join(__dirname+'/charity3.html'));
+    res.sendFile(path.join(__dirname+'/views/charity3.html'));
     charityChosen = "Vanessa Toblerone";
 });
 app.get('/MikeMiller', function(req, res){
-    res.sendFile(path.join(__dirname+'/charity4.html'));
+    res.sendFile(path.join(__dirname+'/views/charity4.html'));
     charityChosen = "Mike Miller";
 });
 app.get('/JakeBosch', function(req, res){
-    res.sendFile(path.join(__dirname+'/charity5.html'));
+    res.sendFile(path.join(__dirname+'/views/charity5.html'));
     charityChosen = "Jake Bosch";
 });
 app.get('/BillyJeffords', function(req, res){
-    res.sendFile(path.join(__dirname+'/charity6.html'));
+
+    res.sendFile(path.join(__dirname+'/views/charity6.html'));
     charityChosen = "Billy Jeffords";
     //document.getElementById("name").innerHTML = charityChosen;
 });
 app.get('/Anipso', function(req, res){
-    res.sendFile(path.join(__dirname+'/AdminPage.html'));
+    res.sendFile(path.join(__dirname+'/views/AdminPage.html'));
     var fullName = req.query.fullName;
-    var age = req.query.age;
+    
+    /*var age = req.query.age;
     var message = req.query.message;
     var category = req.query.category;
     var needDescription = req.query.needDescription;
-    //document.getElementById("name").innerHTML = charityChosen;
+    //document.getElementById("name").innerHTML = charityChosen;*/
 });
 
 
@@ -115,7 +105,7 @@ app.listen(3000, function () {
 
 
 app.get('/payment', function(req, res){
-	res.sendFile(path.join(__dirname+'/payment.html'))
+	res.sendFile(path.join(__dirname+'/views/payment.html'))
 })
 
 
@@ -147,23 +137,18 @@ app.get('/donateT', function(req, res){
 app.use('/', router); 
 
 
-
 app.post('/post-feedback', function(req,res){
-	 var mySchema = new peopleWithNeed({name: req.body.person});
+
+	 var mySchema = new peopleWithNeed({fullName: req.body.fullName, age: req.body.age,
+    message: req.body.message, needDescription: req.body.needDescription});
   	mySchema.save(function(err){
   		if (err) throw err;
   		else{
-		res.send('Data received:\n' + JSON.stringify(req.body));
+		// res.send('Data received:\n' + JSON.stringify(req.body));
+    return res.redirect('/')
 	}
   	})
 });
-app.get('/view-feedback',  function(req, res) {
-      
-    peopleWithNeed.find({},function( err, documents){
-    if(err) throw err;
-     res.send(documents);
 
-     })
-});
 
 
