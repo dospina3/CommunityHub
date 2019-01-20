@@ -68,8 +68,42 @@ h5{
 <div class = decorHome>
 <h1> Community Hub </h1>
 <h5> "Donate through accredited charities to meet the needs of individuals in your community."</h5>
+ 
+ <br>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">HUB</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample07">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+             <a class="nav-link" href="#">Donate <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-md-0">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+
+
 <div class="rightcolumn">
-<hr>
+
 <img id= "charityImg" src="/public/charity.png" class = "center" alt="charity image"> 
 <div>
 
@@ -85,7 +119,7 @@ h5{
       <div class="card-body">
         <h5 class = "card-title"><%= person %></h5>
         <p class="card-text">Need warm coat</p>
-        <a href="#" class="btn btn-primary">More Info</a>
+        <a href="http://localhost:3000/VanessaToblerone" class="btn btn-primary">More Info</a>
       </div>
       </div>
     <% }); %>
