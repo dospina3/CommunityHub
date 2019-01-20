@@ -59,79 +59,83 @@
 			</div>
 		</div>
 	</nav>
+	<div id="containthisish" class="container">
+		<div class="row">
+			<div  class="w3-container w3-center row">
+				<div id ="first" class="w3-panel w3-card col">		
+					<h1 align="left"> Credit Card Info</h1>
 
-	<div  class="w3-container w3-center">
-		<div class="w3-panel w3-card">		
-			<h1 align="left"> Credit Card Info</h1>
-
-			<div class="btn-group">
-				<button>Visa</button>
-				<button>Master Card</button>
-				<button>Discover</button>
-				<button>AMXs</button>
-			</div>
-			<br>
-			<br>
-			<form align="left" action="https://ufcommunityhub.herokuapp.com/donate">
-				First name:
-				<input type="text" name="firstname" value="">
-				<br>
-				Last name:        
-				<input type="text" name="lastname" value="">
-				<br>
-				Account Number: 
-				<input type="text" name="accountnumber" value="">
-				<br>
-				CVV: 
-				<input type="text" name="cvv" value="">
-				<br>
-				Billing Address: 
-				<input type="text" name="addy" value="">
-				<br>
-				Donation Amount: 
-				<input type="text" name="amount" value="">
-				<br>
-				Donation:
-				<select>
-					<option value="item0"></option>
-					<option value="item1">Coat for Jill</option>
-					<option value="item2">Groceries for Johnny</option>
-					<option value="item3">Hot meal for Vanessa</option>
-					<option value="item4">Tie for Mike</otion>
-						<option value="item5">Pair of socks for Jake</otion>
-							<option value="item6">Sneakers for Billy</otion>
-							</select>
-							<br><br>
-							<input type="submit" value="Submit">
-							<input type="reset">
-						</form>
-						<br>
+					<div class="btn-group">
+						<button>Visa</button>
+						<button>Master Card</button>
+						<button>Discover</button>
+						<button>AMXs</button>
 					</div>
-				</div>
-
-				<div align="left" class="w3-container w3-center ">
-					<div align="left" class="w3-panel w3-card">	
-						<div align="left" class = "text text-box">
-							<h1 class="a">Item Donations</h1>
-							<h9 class="b">If you'd like to donate a physical object instead,</h9> 
-							<h9 class"c">contact us here! </h9>
-							
-							<p class="location">(Please include your name and contact information)</p>
-							<form action="https://ufcommunityhub.herokuapp.com/donateT" class="form-box">
-								<textarea name="myTextBox" cols="50" rows="5" class="myTextBox">
-
-								</textarea>
-								<br>
-								<input class="bottomSubmit" type="submit" value="Submit">
-								<input  type="reset">
-							</form>
+					<br>
+					<br>
+					<form align="left" action="http://localhost:3000/donate">
+						First name:
+						<input type="text" name="firstname" value="">
 						<br>
+						Last name:        
+						<input type="text" name="lastname" value="">
+						<br>
+						Account Number: 
+						<input type="text" name="accountnumber" value="">
+						<br>
+						CVV: 
+						<input type="text" name="cvv" value="">
+						<br>
+						Billing Address: 
+						<input type="text" name="addy" value="">
+						<br>
+						Donation Amount: 
+						<input type="text" name="amount" value="">
+						<br>
+						Donation:
+						<select>
+							<option value="item0"></option>
+							<option value="item1">Coat for Jill</option>
+							<option value="item2">Groceries for Johnny</option>
+							<option value="item3">Hot meal for Vanessa</option>
+							<option value="item4">Tie for Mike</otion>
+								<option value="item5">Pair of socks for Jake</otion>
+									<option value="item6">Sneakers for Billy</otion>
+									</select>
+									<br><br>
+									<input type="submit" value="Submit">
+									<input type="reset">
+								</form>
+								<br>
+							</div>
+						</div>
+						<div id="second" class="lastattemp col">
+							<div align="left" class="w3-container w3-center ">
+								<div align="left" class="w3-panel w3-card">	
+									<div align="left" class = "text text-box">
+										<h1 class="a">Item Donations</h1>
+										<h9 class="b">If you'd like to donate a physical object instead,</h9> 
+										<h9 class"c">contact us here! </h9>
 
+										<p class="location">(Please include your name and contact information)</p>
+										<form action="http://localhost:3000/donateT" class="form-box">
+											<textarea name="myTextBox" cols="50" rows="5" class="myTextBox">
+
+											</textarea>
+											<br>
+											<input class="bottomSubmit" type="submit" value="Submit">
+											<input  type="reset">
+										</form>
+										<br>
+
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
+				<br><br>
 
-			<br><br>
-	</body>
+			</body>
 
-</html>
+			</html>
