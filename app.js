@@ -12,6 +12,7 @@ var mongodb = require('mongoose');
 var bodyParser = require('body-parser');
 
 //DATABASE SETUP BEGINS
+app.use(express.static(path.join(__dirname, 'views')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
 var db = mongoose.connect('mongodb://user:password1@ds161144.mlab.com:61144/communityhub');
@@ -72,32 +73,33 @@ console.log('in serve');
 })
 
 app.get('/JillRoberts', function(req, res){
-    res.sendFile(path.join(__dirname+'/charity1.html'));
+    res.sendFile(path.join(__dirname+'/views/charity1.html'));
     charityChosen = "Jill Roberts";
 });
 app.get('/JohnnyCash', function(req, res){
-    res.sendFile(path.join(__dirname+'/charity2.html'));
+    res.sendFile(path.join(__dirname+'/views/charity2.html'));
     charityChosen = "Johnny Cash";
 });
 app.get('/VanessaToblerone', function(req, res){
-    res.sendFile(path.join(__dirname+'/charity3.html'));
+    res.sendFile(path.join(__dirname+'/views/charity3.html'));
     charityChosen = "Vanessa Toblerone";
 });
 app.get('/MikeMiller', function(req, res){
-    res.sendFile(path.join(__dirname+'/charity4.html'));
+    res.sendFile(path.join(__dirname+'/views/charity4.html'));
     charityChosen = "Mike Miller";
 });
 app.get('/JakeBosch', function(req, res){
-    res.sendFile(path.join(__dirname+'/charity5.html'));
+    res.sendFile(path.join(__dirname+'/views/charity5.html'));
     charityChosen = "Jake Bosch";
 });
 app.get('/BillyJeffords', function(req, res){
-    res.sendFile(path.join(__dirname+'/charity6.html'));
+
+    res.sendFile(path.join(__dirname+'/views/charity6.html'));
     charityChosen = "Billy Jeffords";
     //document.getElementById("name").innerHTML = charityChosen;
 });
 app.get('/Anipso', function(req, res){
-    res.sendFile(path.join(__dirname+'/AdminPage.html'));
+    res.sendFile(path.join(__dirname+'/views/AdminPage.html'));
     var fullName = req.query.fullName;
     var age = req.query.age;
     var message = req.query.message;
@@ -115,7 +117,7 @@ app.listen(3000, function () {
 
 
 app.get('/payment', function(req, res){
-	res.sendFile(path.join(__dirname+'/payment.html'))
+	res.sendFile(path.join(__dirname+'/views/payment.html'))
 })
 
 
