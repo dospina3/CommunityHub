@@ -1,0 +1,51 @@
+.banner{
+
+	text-align: center;
+}
+
+
+header {
+
+	
+
+    width:100%;
+
+    height:105px;
+
+    background-image:url("charity.png");
+
+	display: flex;
+
+  	position: absolute;
+
+  	top: 0;
+  	left: 0;
+
+  	color: black;
+}
+
+
+.submit_form{
+
+	text-align: center;
+}
+
+.main_header{
+
+}
+
+.w3-container{
+
+	margin-top: 6%;
+
+	margin-left: 30%;
+
+	margin-right: 10%;
+
+	margin-bottom: 10%;
+
+	max-width: 600px;
+}
+
+
+
