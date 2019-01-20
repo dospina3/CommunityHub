@@ -54,7 +54,6 @@ console.log('in serve');
   peopleWithNeed.find({},function( err, documents){
     if(err) throw err;    	
 		arrayPeople = documents;
-    console.log('should be correct', documents);
     return res.render('index', {arrayPeople: arrayPeople});
    });
 })
@@ -87,13 +86,6 @@ app.get('/BillyJeffords', function(req, res){
 });
 app.get('/Anipso', function(req, res){
     res.sendFile(path.join(__dirname+'/views/AdminPage.html'));
-    var fullName = req.query.fullName;
-    
-    /*var age = req.query.age;
-    var message = req.query.message;
-    var category = req.query.category;
-    var needDescription = req.query.needDescription;
-    //document.getElementById("name").innerHTML = charityChosen;*/
 });
 
 

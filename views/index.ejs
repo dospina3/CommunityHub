@@ -112,11 +112,11 @@ margin-top: 20px;
     <% arrayPeople.forEach(function(person) { %>
       <div class="card">
       <div class="card-body">
-        <h2 class = "card-title"><%=person.fullName%></h2>
+        <h2 id="personName" class = "card-title"><%=person.fullName%></h2>
         <h5 class = "card-title">Age: <%=person.age%></h5>
          
          <p class="card-text"> Need: <%=person.needDescription%></p>
-        <a href="http://localhost:3000/VanessaToblerone" class="btn btn-primary">More Info</a>
+        <a href="http://localhost:3000/JillRoberts"  id="moreInfo" class="btn btn-primary">More Info</a>
       </div>
       </div>
     <% }); %>
